@@ -1,0 +1,56 @@
+@font-face {
+			font-family: Comfortaa;
+			src: url(Comfortaa-VariableFont_wght.ttf);
+		}
+
+@font-face{
+			font-family: Opensans;
+			src: url(OpenSans-Bold.ttf);
+		}
+
+@font-face{
+			font-family: Montserrat;
+			src: url(Montserrat-SemiBold.ttf);
+}
+
+#heading {
+		font-family: Montserrat;
+	}
+
+div.navbar {
+			background-color: #628D03;
+			width: 100%;
+			font-family: Comfortaa;
+			padding: 7px;
+			position: fixed;
+    		display: inline-block;
+    		top: 0px;
+    		left: 0px;
+    		border-top: 10px solid #628D03;
+    		height: 100px;
+    		width: 100%;
+    		z-index: 5;
+    		overflow-x: visible;
+    		overflow-y: visible;
+		}
+
+div.contain {
+			padding-top: 80px;
+			font-family: Comfortaa;
+			color: #0D0D0B;
+			font-size: 60px;
+			text-align: center;
+
+		}
+
+div.footer {
+             /*position: fixed;*/
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             opacity: 0.9;
+             color: #8A8E87;
+             text-align: center;
+             padding-top: 10px;
+             font-family: Comfortaa;
+		}

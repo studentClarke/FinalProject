@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+	<meta charset = "utf-8">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="style.css">
+<style>
+	body {
+		background-color: #E6EBF1;
+	}
+
+	a {
+		color: #F2F2F2;
+		text-decoration: none;
+	}
+
+	div.contain {
+		max-width: 100%;
+
+	}
+
+	div.words {
+		padding-top: 15px;
+	}
+
+	#wide {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+	}
+
+</style>
+<title>Home</title>
+<script>
+		var gifArray = new Array(5);
+		var index = 0;
+
+		function rotate()
+	{
+		document.banner.src = gifArray[index].src;
+		index++;
+		if (index > 4)
+		{
+			index = 0;
+		}
+		setTimeout("rotate()", 2000);
+		return;
+	}
+
+	function startup()
+	{
+		gifArray[0] = new Image;
+		gifArray[0].src = "band.gif";
+		gifArray[1] = new Image;
+		gifArray[1].src = "pilates.gif";
+		gifArray[2] = new Image;
+		gifArray[2].src = "dumbbell1.gif";
+		gifArray[3] = new Image;
+		gifArray[3].src = "kettle1.gif";
+		gifArray[4] = new Image;
+		gifArray[4].src = "yoga.gif";
+		rotate();
+		return;
+	}
+	</script>
+</head>
+<body onLoad="startup()">
+	<div class="navbar">
+		<a href="index.html"><img src="relogov1.png" width="440" height="80"></a>
+		<nav style="float: right;">
+			<a href="index.html">at Home</a> &nbsp;&nbsp;
+			<a href="schedule.html">Schedule</a> &nbsp;&nbsp;
+			<a href="signup.html" style="padding-right: 25px;">Sign Up&nbsp;|&nbsp;Log In</a> &nbsp;&nbsp;
+		</nav>
+	</div>	
+	<div class="contain">
+		<p id="heading" style="color: #0D0D0B">[RE] at Home</p>
+		<p style="font-size: 15px; margin-top: -30px; padding-bottom: 5px;">Live, On-Demand or One-on-One Classes</p>
+		<div class="carousel" align="center">
+			<img id="wide" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" name="banner" src="band.gif">
+		</div>
+		<div class="words">
+		<p style="font-size: 30px">Just One More
+			Just one more rep, just one more weight, just one more workout, just one more day.
+			Here at [RE]FOCUS it only takes a little more effort because your goal is just one more step away.
+		</p>
+		</div>
+	</div>
+
+	<div class="footer">
+  		<p>Designed by Nakeita</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+	<meta charset = "utf-8">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="style.css">
+<style>
+		@font-face{
+			font-family: OpenSansB;
+			src: url(OpenSans-Bold.ttf);
+		}
+
+		h1 {
+			font-family: OpenSansB; 
+		}
+
+		@font-face{
+			font-family: Montserrat;
+			src: url(Montserrat-Regular.ttf);
+		}
+
+		div.middle-container {
+			height: auto;
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
+
+		div.middle{
+			background-color: #E6EBF1;
+			padding-bottom: 50px;
+			padding-top: -30px;
+  			width: 700px;
+  			height: auto;
+		}
+
+		div.empty {
+			background-color: white;
+			height: 170px;
+			margin-bottom: -110px;
+		}
+
+		input[type=text]{
+  			padding: 12px 20px;
+  			margin: 8px 0;
+  			display: inline-block;
+			border: none;
+			box-sizing: border-box;
+			border-bottom: 2px solid #0D0D0B;
+			background-color: #E6EBF1;
+		}
+
+		form {
+			position: relative;
+			padding: 150px 50px 5px 90px;
+			align-content: center;
+		}
+
+		#info {
+			padding-left: 90px;
+		}
+
+		input[type=button] {
+			position: relative;
+			left: 120px;
+			background-color: black;
+  			border: none;
+  			color: white;
+  			width: 50%;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 14px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+  			padding: 10px 24px;
+  			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+
+		input::placeholder {
+  			color: #8A8E87;
+  			opacity: 1;
+  		}
+
+  		a {
+  			color: #E6EBF1;
+  		}
+</style>
+
+<script>
+		function doClear()
+		{
+			document.SignUpForm.email.value = "";
+			document.SignUpForm.pass.value = "";
+			document.SignUpForm.pass1.value = "";
+			document.SignUpForm.firstname.value = "";
+			document.SignUpForm.lastname.value = "";
+			document.SignUpForm.phone.value = "";
+			document.SignUpForm.address.value = "";
+			document.SignUpForm.city.value = "";
+			document.SignUpForm.state.value = "";
+			document.SignUpForm.zip.value = "";
+			document.SignUpForm.date.value = "";
+
+			document.SignUpForm.tick[0].checked = false;
+			document.SignUpForm.tick[1].checked = false;
+			return;
+		}
+
+		function doSubmit()
+		{
+			if (validateText() == false)
+			{
+				alert("Required information missing.");
+				return;
+			}
+			if (validateCheckbox() == false)
+			{
+				alert("Please accept Terms &#38; Conditions.");
+				return;
+			}
+			alert("Your account has been created.");
+			return;
+		}
+
+		function validateText()
+		{
+			var email = document.SignUpForm.email.value;
+			if (email.length == 0) return false;
+			var pass = document.SignUpForm.pass.value;
+			if (pass.length == 0) return false;
+			var pass1 = document.SignUpForm.pass1.value;
+			if (pass1.length == 0) return false;
+			var firstname = document.SignUpForm.firstname.value;
+			if (firstname.length == 0) return false;
+			var lastname = document.SignUpForm.lastname.value;
+			if (lastname.length == 0) return false;
+			var phone = document.SignUpForm.phone.value;
+			if (phone.length == 0) return false;
+			var address = document.SignUpForm.address.value;
+			if (address.length == 0) return false;
+			var city = document.SignUpForm.city.value;
+			if (city.length == 0) return false;
+			var date = document.SignUpForm.date.value;
+			if (date.length == 0) return false;
+			return true;
+		}
+
+		function validateCheckbox()
+		{
+			if (document.SignUpForm.tick[0].checked) return true;
+			if (document.SignUpForm.tick[1].checked) return true;
+			return false;
+		}
+
+	</script>
+
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html"><img src="relogov1.png" width="440" height="80" style="padding-left: 10px;"></a>
+		<nav style="float: right;">
+			<a href="index.html">at Home</a> &nbsp;&nbsp;
+			<a href="schedule.html">Schedule</a> &nbsp;&nbsp;
+			<a href="signup.html" style="padding-right: 25px;">Sign Up&nbsp;|&nbsp;Log In</a> &nbsp;&nbsp;
+		</nav>
+	</div>
+
+	<div class="middle-container">
+	<div class="middle">
+		<div class="empty"></div>
+			
+			<form name="SignUpForm">
+				<h1 style="text-align: center; padding-right: 70px;">Sign Up</h1>
+				<p id="info">
+				<font face="Montserrat">
+					<input name="email" size="50" type="text" placeholder="EMAIL&#42;"><br>
+					<input name="pass" size="50" type="text" placeholder="PASSWORD&#42;"><br>
+					<input name="pass1" size="50" type="text" placeholder="CONFIRM PASSWORD&#42;"><br>
+					<input name="customer" size="50" type="text" placeholder="FIRST NAME&#42;"><br>
+					<input name="customer" size="50" type="text" placeholder="LAST NAME&#42;"><br>
+					<input name="phone" size="50" type="text" placeholder="PRIMARY PHONE&#42;"><br>
+					<input name="address" size="50" type="text" placeholder="ADDRESS&#42;"><br>
+					<input name="city" size="50" type="text" placeholder="CITY&#42;"><br>
+					<input name="state" size="50" type="TEXT" placeholder="STATE&#42;"><br>
+					<input name="zip" size="50" type="text" placeholder="ZIP&#42;"><br>
+					<input name="date" size="50" type="text" placeholder="DATE OF BIRTH&#42;"><br>
+				</font>
+				</p>
+		<p>
+			<font face="Montserrat" style="font-size: 10px;">
+				<input name="tick" type="checkbox">Yes, I'd like to recieve offers, promos and similiar communications from [RE]FOCUS.<br />
+				<input name="tick" type="checkbox">&#42;I understand and accept the <u>Terms &#38; Conditions.</u><br/>
+			</font>
+		</p>
+		<input type="button" value="Submit Order" onClick="doSubmit()"><br /><br />
+		<input type="button" value="Clear Entries" onClick="doClear()">
+	</form>
+	</div>
+	</div>
+
+	<div class="footer">
+  		<p>Designed by Nakeita</p>
+	</div>
+</body>
+</html>

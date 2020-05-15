@@ -87,7 +87,54 @@
   		}
 </style>
 
-<script>
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html"><img src="relogov1.png" width="440" height="80" style="padding-left: 10px;"></a>
+		<nav style="float: right;">
+			<a href="index.html">at Home</a> &nbsp;&nbsp;
+			<a href="schedule.html">Schedule</a> &nbsp;&nbsp;
+			<a href="signup.html" style="padding-right: 25px;">Sign Up&nbsp;|&nbsp;Log In</a> &nbsp;&nbsp;
+		</nav>
+	</div>
+
+	<div class="middle-container">
+	<div class="middle">
+		<div class="empty"></div>
+			
+			<form name="SignUpForm">
+				<h1 style="text-align: center; padding-right: 70px;">Sign Up</h1>
+				<p id="info">
+				<font face="Montserrat">
+					<input name="email" size="50" type="text" placeholder="EMAIL&#42;"><br>
+					<input name="pass" size="50" type="text" placeholder="PASSWORD&#42;"><br>
+					<input name="pass1" size="50" type="text" placeholder="CONFIRM PASSWORD&#42;"><br>
+					<input name="customer" size="50" type="text" placeholder="FIRST NAME&#42;"><br>
+					<input name="customer" size="50" type="text" placeholder="LAST NAME&#42;"><br>
+					<input name="phone" size="50" type="text" placeholder="PRIMARY PHONE&#42;"><br>
+					<input name="address" size="50" type="text" placeholder="ADDRESS&#42;"><br>
+					<input name="city" size="50" type="text" placeholder="CITY&#42;"><br>
+					<input name="state" size="50" type="TEXT" placeholder="STATE&#42;"><br>
+					<input name="zip" size="50" type="text" placeholder="ZIP&#42;"><br>
+					<input name="date" size="50" type="text" placeholder="DATE OF BIRTH&#42;"><br>
+				</font>
+				</p>
+		<p>
+			<font face="Montserrat" style="font-size: 10px;">
+				<input name="tick" type="checkbox">Yes, I'd like to recieve offers, promos and similiar communications from [RE]FOCUS.<br />
+				<input name="tick" type="checkbox">&#42;I understand and accept the <u>Terms &#38; Conditions.</u><br/>
+			</font>
+		</p>
+		<input type="button" value="Submit Order" onClick="doSubmit()"><br /><br />
+		<input type="button" value="Clear Entries" onClick="doClear()">
+	</form>
+	</div>
+	</div>
+
+	<div class="footer">
+  		<p>Designed by Nakeita</p>
+	</div>
+	<script>
 		function doClear()
 		{
 			document.SignUpForm.email.value = "";
@@ -154,53 +201,5 @@
 		}
 
 	</script>
-
-</head>
-<body>
-	<div class="navbar">
-		<a href="index.html"><img src="relogov1.png" width="440" height="80" style="padding-left: 10px;"></a>
-		<nav style="float: right;">
-			<a href="index.html">at Home</a> &nbsp;&nbsp;
-			<a href="schedule.html">Schedule</a> &nbsp;&nbsp;
-			<a href="signup.html" style="padding-right: 25px;">Sign Up&nbsp;|&nbsp;Log In</a> &nbsp;&nbsp;
-		</nav>
-	</div>
-
-	<div class="middle-container">
-	<div class="middle">
-		<div class="empty"></div>
-			
-			<form name="SignUpForm">
-				<h1 style="text-align: center; padding-right: 70px;">Sign Up</h1>
-				<p id="info">
-				<font face="Montserrat">
-					<input name="email" size="50" type="text" placeholder="EMAIL&#42;"><br>
-					<input name="pass" size="50" type="text" placeholder="PASSWORD&#42;"><br>
-					<input name="pass1" size="50" type="text" placeholder="CONFIRM PASSWORD&#42;"><br>
-					<input name="customer" size="50" type="text" placeholder="FIRST NAME&#42;"><br>
-					<input name="customer" size="50" type="text" placeholder="LAST NAME&#42;"><br>
-					<input name="phone" size="50" type="text" placeholder="PRIMARY PHONE&#42;"><br>
-					<input name="address" size="50" type="text" placeholder="ADDRESS&#42;"><br>
-					<input name="city" size="50" type="text" placeholder="CITY&#42;"><br>
-					<input name="state" size="50" type="TEXT" placeholder="STATE&#42;"><br>
-					<input name="zip" size="50" type="text" placeholder="ZIP&#42;"><br>
-					<input name="date" size="50" type="text" placeholder="DATE OF BIRTH&#42;"><br>
-				</font>
-				</p>
-		<p>
-			<font face="Montserrat" style="font-size: 10px;">
-				<input name="tick" type="checkbox">Yes, I'd like to recieve offers, promos and similiar communications from [RE]FOCUS.<br />
-				<input name="tick" type="checkbox">&#42;I understand and accept the <u>Terms &#38; Conditions.</u><br/>
-			</font>
-		</p>
-		<input type="button" value="Submit Order" onClick="doSubmit()"><br /><br />
-		<input type="button" value="Clear Entries" onClick="doClear()">
-	</form>
-	</div>
-	</div>
-
-	<div class="footer">
-  		<p>Designed by Nakeita</p>
-	</div>
 </body>
 </html>
